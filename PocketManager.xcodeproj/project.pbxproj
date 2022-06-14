@@ -82,7 +82,8 @@
 				40E90C882858946400A10CFD /* LaunchScreen.storyboard */,
 				40E90C8B2858946400A10CFD /* Info.plist */,
 			);
-			path = PocketMenager;
+			name = PocketMenager;
+			path = PocketManager;
 			sourceTree = "<group>";
 		};
 		40E90C9128589C3B00A10CFD /* Controllers */ = {
@@ -359,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PocketMenager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PocketMenager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketManager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
