@@ -7,19 +7,19 @@
 
 import UIKit
 
-class HeaderTableView: UIView {
-    
-//    @IBOutlet weak var titleLabel: UILabel!
+class HeaderTableView: UIView, NibLoadable {
+    var contentView: UIView?
 
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-////        fromNib()
-//        self.view = NSBundle.mainBundle().loadNibNamed("HeaderTableView", owner: self, options: nil)[0] as? UIView
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-////        fromNib()
-//        self.uiview = NSBundle.mainBundle().loadNibNamed("HeaderTableView", owner: self, options: nil)[0] as? UIView
-//    }
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ctaButton: UIButton!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadFromNib()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        loadFromNib()
+    }
 }

@@ -14,8 +14,8 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(TransactionsTableViewCell.nib, forCellReuseIdentifier: TransactionsTableViewCell.identifier)
-        tableView.register(HeaderTableView.nib, forCellReuseIdentifier: HeaderTableView.identifier)
+        tableView.register(TransactionsTableViewCell.getNib, forCellReuseIdentifier: TransactionsTableViewCell.identifier)
+        tableView.register(HeaderTableView.getNib, forCellReuseIdentifier: HeaderTableView.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
