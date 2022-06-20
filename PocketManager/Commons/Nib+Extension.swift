@@ -16,13 +16,6 @@ public protocol NibLoadable: HasNib {
 
 extension NibLoadable where Self: UIView {
     
-    /**
-     Loads UIView subclasses contained in Nib file.
-     
-     - requires: Use it in `init(frame: CGRect)` and `init?(coder aDecoder: NSCoder)` to create view properly.
-     
-     - Author: Mobilee - Łukasz Szarkowicz
-     */
     func loadFromNib() {
         let viewsInNib = Self.nib.instantiate(withOwner: self, options: nil).compactMap { $0 as? UIView }
 

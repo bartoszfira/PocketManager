@@ -17,7 +17,6 @@ class TransactionsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,4 +25,9 @@ class TransactionsTableViewCell: UITableViewCell {
         
     }
     
+    func configure(description: String?, date: String?, amount: String?) {
+        self.descLable.text = description
+        self.dateLabel.text = date
+        self.amountLabel.text = amount
+    }
 }

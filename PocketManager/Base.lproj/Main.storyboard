@@ -11,26 +11,38 @@
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="PocketMenager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="PocketManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YK9-Ga-SO5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKK-5n-k7l" customClass="HeaderView" customModule="PocketManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Ehx-Xb-W9v"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YK9-Ga-SO5">
+                                <rect key="frame" x="0.0" y="280" width="414" height="616"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YK9-Ga-SO5" secondAttribute="trailing" id="1xG-Vi-mge"/>
-                            <constraint firstItem="YK9-Ga-SO5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DuU-Uo-TdS"/>
-                            <constraint firstAttribute="bottom" secondItem="YK9-Ga-SO5" secondAttribute="bottom" id="dIQ-Za-EGS"/>
-                            <constraint firstItem="YK9-Ga-SO5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iO1-sk-GeQ"/>
+                            <constraint firstItem="tKK-5n-k7l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XH9-6e-upv"/>
+                            <constraint firstItem="YK9-Ga-SO5" firstAttribute="top" secondItem="tKK-5n-k7l" secondAttribute="bottom" id="dXH-xy-3fK"/>
+                            <constraint firstItem="YK9-Ga-SO5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gZ5-Ma-ZX5"/>
+                            <constraint firstItem="YK9-Ga-SO5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hXf-f4-6hX"/>
+                            <constraint firstItem="tKK-5n-k7l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mdf-ch-Rlf"/>
+                            <constraint firstAttribute="bottom" secondItem="YK9-Ga-SO5" secondAttribute="bottom" id="rjX-VQ-OpA"/>
+                            <constraint firstItem="tKK-5n-k7l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zYY-9I-TSf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="tKK-5n-k7l" id="L4j-UF-4kU"/>
                         <outlet property="tableView" destination="YK9-Ga-SO5" id="bGG-n1-iia"/>
                     </connections>
                 </viewController>
@@ -42,6 +54,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

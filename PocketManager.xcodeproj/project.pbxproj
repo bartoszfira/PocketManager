@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
+		4058486D285CA84900DC76A2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* String+Extension.swift */; };
+		4058486F285CCF0400DC76A2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* HeaderView.swift */; };
+		40584872285CCF5200DC76A2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40584871285CCF5200DC76A2 /* HeaderView.xib */; };
 		40E90C7E2858944F00A10CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90C7D2858944F00A10CFD /* AppDelegate.swift */; };
 		40E90C802858944F00A10CFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90C7F2858944F00A10CFD /* SceneDelegate.swift */; };
 		40E90C822858944F00A10CFD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90C812858944F00A10CFD /* DashboardViewController.swift */; };
@@ -16,7 +20,6 @@
 		40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90C9428589FB400A10CFD /* TransactionsTableViewCell.swift */; };
 		40E90C9728589FB400A10CFD /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E90C9528589FB400A10CFD /* TransactionsTableViewCell.xib */; };
 		40E90C9A2858ABAD00A10CFD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90C992858ABAD00A10CFD /* UIView+Extension.swift */; };
-		40E90CA12858D5D600A10CFD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90CA02858D5D600A10CFD /* HeaderView.swift */; };
 		40E90CA32858E11C00A10CFD /* HeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E90CA22858E11C00A10CFD /* HeaderTableView.xib */; };
 		40E90CA52858E1A900A10CFD /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E90CA42858E1A900A10CFD /* HeaderTableView.swift */; };
 		40F139BA2858EC4400FC4B7D /* Nib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F139B92858EC4400FC4B7D /* Nib+Extension.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
+		4058486C285CA84900DC76A2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4058486E285CCF0400DC76A2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		40584871285CCF5200DC76A2 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		40E90C7A2858944F00A10CFD /* PocketManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E90C7D2858944F00A10CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E90C7F2858944F00A10CFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +42,6 @@
 		40E90C9428589FB400A10CFD /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		40E90C9528589FB400A10CFD /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
 		40E90C992858ABAD00A10CFD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		40E90CA02858D5D600A10CFD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		40E90CA22858E11C00A10CFD /* HeaderTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableView.xib; sourceTree = "<group>"; };
 		40E90CA42858E1A900A10CFD /* HeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
 		40F139B92858EC4400FC4B7D /* Nib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nib+Extension.swift"; sourceTree = "<group>"; };
@@ -53,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40584869285C925C00DC76A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4058486A285C92E400DC76A2 /* TransactionDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40584870285CCF0B00DC76A2 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				4058486E285CCF0400DC76A2 /* HeaderView.swift */,
+				40584871285CCF5200DC76A2 /* HeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		40E90C712858944F00A10CFD = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +98,7 @@
 				40E90C7D2858944F00A10CFD /* AppDelegate.swift */,
 				40E90C7F2858944F00A10CFD /* SceneDelegate.swift */,
 				40E90C982858AB8100A10CFD /* Commons */,
+				40584869285C925C00DC76A2 /* Models */,
 				40E90C9228589C6900A10CFD /* Views */,
 				40E90C9128589C3B00A10CFD /* Controllers */,
 				40E90C862858946400A10CFD /* Assets.xcassets */,
@@ -97,9 +121,9 @@
 		40E90C9228589C6900A10CFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40584870285CCF0B00DC76A2 /* HeaderView */,
 				40E90C9F2858C11200A10CFD /* HeaderTableView */,
 				40E90C9328589EBC00A10CFD /* TransactionsViewCell */,
-				40E90CA02858D5D600A10CFD /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +143,7 @@
 				40E90C992858ABAD00A10CFD /* UIView+Extension.swift */,
 				40F139B92858EC4400FC4B7D /* Nib+Extension.swift */,
 				40F139BB2858EC5F00FC4B7D /* UIViewNib+Extension.swift */,
+				4058486C285CA84900DC76A2 /* String+Extension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -126,8 +151,8 @@
 		40E90C9F2858C11200A10CFD /* HeaderTableView */ = {
 			isa = PBXGroup;
 			children = (
-				40E90CA22858E11C00A10CFD /* HeaderTableView.xib */,
 				40E90CA42858E1A900A10CFD /* HeaderTableView.swift */,
+				40E90CA22858E11C00A10CFD /* HeaderTableView.xib */,
 			);
 			path = HeaderTableView;
 			sourceTree = "<group>";
@@ -192,6 +217,7 @@
 				40E90C8A2858946400A10CFD /* LaunchScreen.storyboard in Resources */,
 				40E90CA32858E11C00A10CFD /* HeaderTableView.xib in Resources */,
 				40E90C9728589FB400A10CFD /* TransactionsTableViewCell.xib in Resources */,
+				40584872285CCF5200DC76A2 /* HeaderView.xib in Resources */,
 				40E90C872858946400A10CFD /* Assets.xcassets in Resources */,
 				40E90C852858944F00A10CFD /* Main.storyboard in Resources */,
 			);
@@ -205,13 +231,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E90C822858944F00A10CFD /* DashboardViewController.swift in Sources */,
+				4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */,
 				40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */,
 				40E90C7E2858944F00A10CFD /* AppDelegate.swift in Sources */,
 				40E90C9A2858ABAD00A10CFD /* UIView+Extension.swift in Sources */,
 				40E90C802858944F00A10CFD /* SceneDelegate.swift in Sources */,
 				40F139BC2858EC5F00FC4B7D /* UIViewNib+Extension.swift in Sources */,
-				40E90CA12858D5D600A10CFD /* HeaderView.swift in Sources */,
+				4058486F285CCF0400DC76A2 /* HeaderView.swift in Sources */,
 				40E90CA52858E1A900A10CFD /* HeaderTableView.swift in Sources */,
+				4058486D285CA84900DC76A2 /* String+Extension.swift in Sources */,
 				40F139BA2858EC4400FC4B7D /* Nib+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
