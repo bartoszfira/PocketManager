@@ -2,13 +2,18 @@
 //  String+Extension.swift
 //  PocketManager
 //
-//  Created by Bartek Fira on 17/06/2022.
+//  Created by Bartek Fira on 18/07/2022.
 //
 
-import Foundation
+import UIKit
 
-extension Double {
-    var toString: String{
-        return String(self)
+extension StringProtocol {
+    var firstUppercased: String { return prefix(1).uppercased() + dropFirst() }
+    var firstCapitalized: String { return prefix(1).capitalized + dropFirst() }
+}
+
+extension String {
+    var toDouble: Double {
+        return Double(self) ?? 0
     }
 }

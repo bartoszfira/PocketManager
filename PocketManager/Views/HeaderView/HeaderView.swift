@@ -1,36 +1,37 @@
 //
-//  HeaderView.swift
-//  PocketManager
+//  HeaderTableView.swift
+//  PocketMenager
 //
-//  Created by Bartek Fira on 17/06/2022.
+//  Created by Bartek Fira on 14/06/2022.
 //
 
 import UIKit
 
 class HeaderView: UIView, NibLoadable {
     var contentView: UIView?
+
+
+    var completion: (() -> Void)?
     
-    @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var notificationButton: UIButton!
-    @IBOutlet weak var balanceView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ctaButton: UIButton!
     
-    
+    @IBAction func ctaTapped(_ sender: Any) {
+        completion?()
+    }
+
+    init(completion: (() -> Void)?) {
+        super.init(frame: .zero)
+        self.completion = completion
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib()
-        configure()
     }
-
-    // dlaczego w required init config działa(w override nie)?
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadFromNib()
-        configure()
-    }
-    
-    func configure() {
-        greetingLabel.text = "Hello,"
-        nameLabel.text = "Bartek"
     }
 }

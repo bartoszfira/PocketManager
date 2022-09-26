@@ -15,4 +15,8 @@ extension UIView {
     static var getNib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
+    
+    func layerCircle() {
+        self.layer.cornerRadius = frame.size.width/2
+    }
 }

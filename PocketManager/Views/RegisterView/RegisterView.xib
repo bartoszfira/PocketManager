@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView">
+            <connections>
+                <outlet property="mailView" destination="ct3-yn-T7k" id="vxf-0M-yLL"/>
+                <outlet property="nameView" destination="42s-x7-pMp" id="iEL-EI-3WV"/>
+                <outlet property="passwordView" destination="4Mu-QL-KmW" id="7bO-Ph-gkB"/>
+                <outlet property="surnameView" destination="0ga-0e-jMa" id="HNQ-wS-JPF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oSa-zc-DQ4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42s-x7-pMp" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="178.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-0e-jMa" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="179.5" width="414" height="178.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct3-yn-T7k" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="359" width="414" height="178"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mu-QL-KmW" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="538" width="414" height="178.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-zR-C9m">
+                            <rect key="frame" x="0.0" y="717.5" width="414" height="178.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="R6J-hP-wXw">
+                                    <rect key="frame" x="162.5" y="68.5" width="89" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Register">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="black"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ctaTapped:" destination="-1" eventType="touchUpInside" id="O5W-sq-kcv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="R6J-hP-wXw" firstAttribute="centerY" secondItem="K6j-zR-C9m" secondAttribute="centerY" id="KD9-u5-9KT"/>
+                                <constraint firstItem="R6J-hP-wXw" firstAttribute="centerX" secondItem="K6j-zR-C9m" secondAttribute="centerX" id="ssF-Gv-1ZW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="oSa-zc-DQ4" secondAttribute="bottom" id="I1L-hs-0KV"/>
+                <constraint firstAttribute="trailing" secondItem="oSa-zc-DQ4" secondAttribute="trailing" id="TOF-Qw-GXC"/>
+                <constraint firstItem="oSa-zc-DQ4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UEU-IH-sQ8"/>
+                <constraint firstItem="oSa-zc-DQ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ont-3A-k6O"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71" y="63"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

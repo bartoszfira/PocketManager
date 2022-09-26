@@ -24,6 +24,7 @@ extension NibLoadable where Self: UIView {
         }
 
         contentView = viewsInNib.first
+        contentView?.backgroundColor = .clear
     }
 
     fileprivate func setupLayout(for view: UIView) {

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewContactView" customModule="PocketManager" customModuleProvider="target">
+            <connections>
+                <outlet property="ctaButton" destination="dit-LS-IJA" id="X40-QN-hFC"/>
+                <outlet property="mailView" destination="H0g-9j-afq" id="Xag-kM-fRD"/>
+                <outlet property="nameView" destination="JYG-pt-iKA" id="f6g-FU-QTu"/>
+                <outlet property="surenameView" destination="rWj-wu-a3L" id="H6m-yQ-rGI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="442"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HvT-t5-odD">
+                    <rect key="frame" x="0.0" y="0.0" width="457" height="442"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYG-pt-iKA" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="457" height="110"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWj-wu-a3L" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="111" width="457" height="109.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-9j-afq" customClass="BlankView" customModule="PocketManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="221.5" width="457" height="110"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M19-UG-ltB">
+                            <rect key="frame" x="0.0" y="332.5" width="457" height="109.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="dit-LS-IJA">
+                                    <rect key="frame" x="192" y="39.5" width="73.5" height="30.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Add">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <imageReference key="image" image="person.crop.circle.fill.badge.plus" catalog="system" symbolScale="large"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="black"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ctaTapped:" destination="-1" eventType="touchUpInside" id="FsD-iK-Y4y"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="dit-LS-IJA" firstAttribute="centerY" secondItem="M19-UG-ltB" secondAttribute="centerY" id="nmz-ry-sa9"/>
+                                <constraint firstItem="dit-LS-IJA" firstAttribute="centerX" secondItem="M19-UG-ltB" secondAttribute="centerX" id="u3t-ps-yvK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HvT-t5-odD" secondAttribute="trailing" id="85w-2r-eod"/>
+                <constraint firstItem="HvT-t5-odD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FfF-eN-912"/>
+                <constraint firstAttribute="bottom" secondItem="HvT-t5-odD" secondAttribute="bottom" id="vMf-wr-tQk"/>
+                <constraint firstItem="HvT-t5-odD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wh9-dH-a0N"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="113.768115942029" y="-88.392857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

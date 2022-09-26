@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="TransactionsTableViewCell" customModule="PocketManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2b-Wl-G86">
+                        <rect key="frame" x="8" y="15" width="60" height="60"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bsg-d6-Y0h" customClass="InitialView" customModule="PocketManager" customModuleProvider="target">
+                                <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="Bsg-d6-Y0h" firstAttribute="leading" secondItem="v2b-Wl-G86" secondAttribute="leading" constant="4" id="B9M-T7-zkd"/>
+                            <constraint firstAttribute="height" constant="60" id="Zsg-rj-hCY"/>
+                            <constraint firstAttribute="trailing" secondItem="Bsg-d6-Y0h" secondAttribute="trailing" constant="4" id="fIt-tH-FnI"/>
+                            <constraint firstItem="Bsg-d6-Y0h" firstAttribute="top" secondItem="v2b-Wl-G86" secondAttribute="top" constant="4" id="nbG-uZ-tWf"/>
+                            <constraint firstAttribute="width" constant="60" id="wvD-D6-a4T"/>
+                            <constraint firstAttribute="bottom" secondItem="Bsg-d6-Y0h" secondAttribute="bottom" constant="4" id="zZ5-pg-hoC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-N5-PIo">
+                        <rect key="frame" x="76" y="16" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-0j-PE3">
+                        <rect key="frame" x="76" y="42" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-CA-tTH">
+                        <rect key="frame" x="270" y="34.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="pgE-CA-tTH" secondAttribute="trailing" constant="8" id="9Wk-u6-dU3"/>
+                    <constraint firstItem="bcb-0j-PE3" firstAttribute="leading" secondItem="v2b-Wl-G86" secondAttribute="trailing" constant="8" id="JPa-em-bS0"/>
+                    <constraint firstItem="bcb-0j-PE3" firstAttribute="top" secondItem="aof-N5-PIo" secondAttribute="bottom" constant="5" id="QJA-vX-Lfy"/>
+                    <constraint firstItem="pgE-CA-tTH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RZ9-fE-Mjy"/>
+                    <constraint firstItem="aof-N5-PIo" firstAttribute="leading" secondItem="v2b-Wl-G86" secondAttribute="trailing" constant="8" id="UvH-LB-siJ"/>
+                    <constraint firstItem="v2b-Wl-G86" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XBv-6A-MNW"/>
+                    <constraint firstItem="v2b-Wl-G86" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jaV-nl-lzK"/>
+                    <constraint firstItem="aof-N5-PIo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="une-Yx-Pad"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="pgE-CA-tTH" id="ywz-HZ-0yg"/>
+                <outlet property="dateLabel" destination="bcb-0j-PE3" id="9UB-hB-9UN"/>
+                <outlet property="descLable" destination="aof-N5-PIo" id="buU-qA-bXF"/>
+                <outlet property="iconView" destination="Bsg-d6-Y0h" id="AyK-tV-pRm"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="123.88392857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
