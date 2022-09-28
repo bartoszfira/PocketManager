@@ -28,6 +28,10 @@
 		4057D6E828E4550100FE021D /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E728E4550100FE021D /* DashboardViewModel.swift */; };
 		4057D6EB28E4566200FE021D /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E928E4554900FE021D /* DashboardPresenter.swift */; };
 		4057D6EE28E460D500FE021D /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6ED28E460D500FE021D /* DashboardDataSource.swift */; };
+		4057D6F028E472E400FE021D /* ListableTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6EF28E472E400FE021D /* ListableTapGestureRecognizer.swift */; };
+		4057D6F228E4733900FE021D /* TitleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F128E4733900FE021D /* TitleListPresenter.swift */; };
+		4057D6F428E473E600FE021D /* TitleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F328E473E600FE021D /* TitleListViewModel.swift */; };
+		4057D6F628E47BA000FE021D /* TitleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F528E47BA000FE021D /* TitleListDataSource.swift */; };
 		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
 		4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* Double+Extension.swift */; };
 		4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* BalanceView.swift */; };
@@ -117,6 +121,10 @@
 		4057D6E728E4550100FE021D /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		4057D6E928E4554900FE021D /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		4057D6ED28E460D500FE021D /* DashboardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
+		4057D6EF28E472E400FE021D /* ListableTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListableTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		4057D6F128E4733900FE021D /* TitleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListPresenter.swift; sourceTree = "<group>"; };
+		4057D6F328E473E600FE021D /* TitleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListViewModel.swift; sourceTree = "<group>"; };
+		4057D6F528E47BA000FE021D /* TitleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListDataSource.swift; sourceTree = "<group>"; };
 		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4058486C285CA84900DC76A2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4058486E285CCF0400DC76A2 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -243,6 +251,7 @@
 				4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */,
 				4057D6E028E4424000FE021D /* RegisterViewModel.swift */,
 				4057D6E728E4550100FE021D /* DashboardViewModel.swift */,
+				4057D6F328E473E600FE021D /* TitleListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 				4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */,
 				4057D6E228E4427700FE021D /* RegisterPresenter.swift */,
 				4057D6E928E4554900FE021D /* DashboardPresenter.swift */,
+				4057D6F128E4733900FE021D /* TitleListPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -261,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				4057D6ED28E460D500FE021D /* DashboardDataSource.swift */,
+				4057D6F528E47BA000FE021D /* TitleListDataSource.swift */,
 			);
 			path = DataSoruce;
 			sourceTree = "<group>";
@@ -407,12 +418,12 @@
 			isa = PBXGroup;
 			children = (
 				4057D6EC28E460A100FE021D /* DataSoruce */,
-				4057D6DB28E1E49700FE021D /* Presenters */,
 				40E90C7D2858944F00A10CFD /* AppDelegate.swift */,
 				40E90C7F2858944F00A10CFD /* SceneDelegate.swift */,
 				401EE6682880716000B03B73 /* Managers */,
 				40E90C982858AB8100A10CFD /* Commons */,
 				40584869285C925C00DC76A2 /* Models */,
+				4057D6DB28E1E49700FE021D /* Presenters */,
 				40E90C9228589C6900A10CFD /* Views */,
 				4057D6D828E1E37D00FE021D /* ViewModel */,
 				40E90C9128589C3B00A10CFD /* Controllers */,
@@ -489,6 +500,7 @@
 				40C8E1C22881B20800839091 /* Encodable+Extension.swift */,
 				40C52E922885D5370030189E /* String+Extension.swift */,
 				407D98E92892E27300E9AF83 /* Date+Extenstion.swift */,
+				4057D6EF28E472E400FE021D /* ListableTapGestureRecognizer.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -605,6 +617,7 @@
 				40E90C822858944F00A10CFD /* DashboardViewController.swift in Sources */,
 				4058488528664B7B00DC76A2 /* InvoiceAddNewRecordView.swift in Sources */,
 				401EE66C288183CC00B03B73 /* ProfileViewController.swift in Sources */,
+				4057D6F228E4733900FE021D /* TitleListPresenter.swift in Sources */,
 				407D98E22889CA8000E9AF83 /* BlankWithControlView.swift in Sources */,
 				4057D6DA28E1E3AE00FE021D /* LoginViewModel.swift in Sources */,
 				401EE66A2880718F00B03B73 /* AuthService.swift in Sources */,
@@ -613,6 +626,7 @@
 				4057D6EB28E4566200FE021D /* DashboardPresenter.swift in Sources */,
 				407D98EC2897C6F300E9AF83 /* SearchStoreViewController.swift in Sources */,
 				4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */,
+				4057D6F628E47BA000FE021D /* TitleListDataSource.swift in Sources */,
 				40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */,
 				40C52E932885D5370030189E /* String+Extension.swift in Sources */,
 				4058487F2866473B00DC76A2 /* BlankView.swift in Sources */,
@@ -622,10 +636,12 @@
 				401EE653287754C000B03B73 /* SearchContactViewController.swift in Sources */,
 				40BE66A6287336FC00F76A08 /* AppColors.swift in Sources */,
 				4057D6EE28E460D500FE021D /* DashboardDataSource.swift in Sources */,
+				4057D6F028E472E400FE021D /* ListableTapGestureRecognizer.swift in Sources */,
 				40E90C7E2858944F00A10CFD /* AppDelegate.swift in Sources */,
 				40817E69286B63090058666E /* TransactionsViewController.swift in Sources */,
 				40C52E9D288887200030189E /* UserService.swift in Sources */,
 				40E90C9A2858ABAD00A10CFD /* UIView+Extension.swift in Sources */,
+				4057D6F428E473E600FE021D /* TitleListViewModel.swift in Sources */,
 				40E90C802858944F00A10CFD /* SceneDelegate.swift in Sources */,
 				40817E6B286EEE720058666E /* ContactsViewController.swift in Sources */,
 				407D98D428893A9400E9AF83 /* TitleListViewController.swift in Sources */,

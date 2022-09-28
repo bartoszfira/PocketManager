@@ -8,7 +8,13 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-class StoreService {
+protocol StoreServiceProtocol {
+    func addNew(_ store: StoreDTO, completion: @escaping () -> Void)
+    func fetchStores(completion: @escaping (([StoreDTO]?) -> Void))
+    func fetchStore(id: String, completion: @escaping ((StoreDTO?) -> Void))
+}
+
+class StoreService: StoreServiceProtocol {
     
     static let shared = StoreService()
     

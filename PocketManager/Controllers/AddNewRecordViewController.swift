@@ -62,8 +62,11 @@ class AddNewRecordViewController: UIViewController {
     func displayTitleListVC(with transaction: DealType) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "TitleListViewController") as! TitleListViewController
-        vc.transactionType = transaction
-        vc.delegate = self
+        let viewModel = TitleListViewModel(presenter: vc,
+                                           transactionType: transaction,
+                                           recordDelegate: self)
+
+        vc.viewModel = viewModel
         self.present(vc, animated: true, completion: nil)
 
     }
