@@ -21,7 +21,13 @@
 		401EE66C288183CC00B03B73 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401EE66B288183CB00B03B73 /* ProfileViewController.swift */; };
 		4057D6DA28E1E3AE00FE021D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */; };
 		4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */; };
-		4057D6DF28E1EC3A00FE021D /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6DE28E1EC3A00FE021D /* Credentials.swift */; };
+		4057D6DF28E1EC3A00FE021D /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6DE28E1EC3A00FE021D /* LoginCredentials.swift */; };
+		4057D6E128E4424000FE021D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E028E4424000FE021D /* RegisterViewModel.swift */; };
+		4057D6E328E4427700FE021D /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E228E4427700FE021D /* RegisterPresenter.swift */; };
+		4057D6E628E444DF00FE021D /* RegistrationCredencial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E528E444DF00FE021D /* RegistrationCredencial.swift */; };
+		4057D6E828E4550100FE021D /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E728E4550100FE021D /* DashboardViewModel.swift */; };
+		4057D6EB28E4566200FE021D /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6E928E4554900FE021D /* DashboardPresenter.swift */; };
+		4057D6EE28E460D500FE021D /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6ED28E460D500FE021D /* DashboardDataSource.swift */; };
 		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
 		4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* Double+Extension.swift */; };
 		4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* BalanceView.swift */; };
@@ -104,7 +110,13 @@
 		401EE66B288183CB00B03B73 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		4057D6DE28E1EC3A00FE021D /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		4057D6DE28E1EC3A00FE021D /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		4057D6E028E4424000FE021D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		4057D6E228E4427700FE021D /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		4057D6E528E444DF00FE021D /* RegistrationCredencial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCredencial.swift; sourceTree = "<group>"; };
+		4057D6E728E4550100FE021D /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		4057D6E928E4554900FE021D /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		4057D6ED28E460D500FE021D /* DashboardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
 		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4058486C285CA84900DC76A2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4058486E285CCF0400DC76A2 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -229,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */,
+				4057D6E028E4424000FE021D /* RegisterViewModel.swift */,
+				4057D6E728E4550100FE021D /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -237,8 +251,18 @@
 			isa = PBXGroup;
 			children = (
 				4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */,
+				4057D6E228E4427700FE021D /* RegisterPresenter.swift */,
+				4057D6E928E4554900FE021D /* DashboardPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		4057D6EC28E460A100FE021D /* DataSoruce */ = {
+			isa = PBXGroup;
+			children = (
+				4057D6ED28E460D500FE021D /* DashboardDataSource.swift */,
+			);
+			path = DataSoruce;
 			sourceTree = "<group>";
 		};
 		40584869285C925C00DC76A2 /* Models */ = {
@@ -246,7 +270,8 @@
 			children = (
 				407D98DD2889A57100E9AF83 /* DTO */,
 				407D98DE2889A58400E9AF83 /* DealType.swift */,
-				4057D6DE28E1EC3A00FE021D /* Credentials.swift */,
+				4057D6DE28E1EC3A00FE021D /* LoginCredentials.swift */,
+				4057D6E528E444DF00FE021D /* RegistrationCredencial.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +406,7 @@
 		40E90C7C2858944F00A10CFD /* PocketMenager */ = {
 			isa = PBXGroup;
 			children = (
+				4057D6EC28E460A100FE021D /* DataSoruce */,
 				4057D6DB28E1E49700FE021D /* Presenters */,
 				40E90C7D2858944F00A10CFD /* AppDelegate.swift */,
 				40E90C7F2858944F00A10CFD /* SceneDelegate.swift */,
@@ -584,6 +610,7 @@
 				401EE66A2880718F00B03B73 /* AuthService.swift in Sources */,
 				40BE66BA2874625400F76A08 /* CGFloat+Extension.swift in Sources */,
 				4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */,
+				4057D6EB28E4566200FE021D /* DashboardPresenter.swift in Sources */,
 				407D98EC2897C6F300E9AF83 /* SearchStoreViewController.swift in Sources */,
 				4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */,
 				40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */,
@@ -594,6 +621,7 @@
 				40BE66BE2877013900F76A08 /* SearchTransactionViewController.swift in Sources */,
 				401EE653287754C000B03B73 /* SearchContactViewController.swift in Sources */,
 				40BE66A6287336FC00F76A08 /* AppColors.swift in Sources */,
+				4057D6EE28E460D500FE021D /* DashboardDataSource.swift in Sources */,
 				40E90C7E2858944F00A10CFD /* AppDelegate.swift in Sources */,
 				40817E69286B63090058666E /* TransactionsViewController.swift in Sources */,
 				40C52E9D288887200030189E /* UserService.swift in Sources */,
@@ -609,6 +637,7 @@
 				405848752864C2D800DC76A2 /* ScrapBalanceView.swift in Sources */,
 				4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */,
 				401EE659287DC3AA00B03B73 /* RegisterViewController.swift in Sources */,
+				4057D6E628E444DF00FE021D /* RegistrationCredencial.swift in Sources */,
 				401EE65128773D1A00B03B73 /* ContactDTO.swift in Sources */,
 				40BE66A328730CF800F76A08 /* ContactTableViewCell.swift in Sources */,
 				40E90CA52858E1A900A10CFD /* HeaderView.swift in Sources */,
@@ -618,12 +647,15 @@
 				407D98E82892C1A900E9AF83 /* UserDTO.swift in Sources */,
 				40C8E1C32881B20800839091 /* Encodable+Extension.swift in Sources */,
 				4058487A2865B2DC00DC76A2 /* ContactsView.swift in Sources */,
+				4057D6E828E4550100FE021D /* DashboardViewModel.swift in Sources */,
 				40817E672869FFF70058666E /* UIVIewController+Extension.swift in Sources */,
 				407D98DF2889A58400E9AF83 /* DealType.swift in Sources */,
-				4057D6DF28E1EC3A00FE021D /* Credentials.swift in Sources */,
+				4057D6DF28E1EC3A00FE021D /* LoginCredentials.swift in Sources */,
 				4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */,
+				4057D6E328E4427700FE021D /* RegisterPresenter.swift in Sources */,
 				401EE667288061A600B03B73 /* UINavigationController+Extension.swift in Sources */,
 				407D98D628898E3A00E9AF83 /* StoreDTO.swift in Sources */,
+				4057D6E128E4424000FE021D /* RegisterViewModel.swift in Sources */,
 				40C52E9C2888871B0030189E /* TransactionService.swift in Sources */,
 				40F139BA2858EC4400FC4B7D /* Nib+Extension.swift in Sources */,
 				401EE65C287DC58800B03B73 /* LoginView.swift in Sources */,

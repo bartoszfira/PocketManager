@@ -62,17 +62,17 @@ class ContactsViewController: UIViewController {
     func setupHeader() {
         header.titleLabel.text = listType.title
         header.ctaButton.setTitle("Add new", for: .normal)
-        header.completion = {
-            switch self.listType {
-            case .contact:
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "AddNewContactViewController") as! AddNewContactViewController
-                self.navigationController?.pushViewController(vc, animated: true)
-            case .store:
-                print("Add Store..")
-            }
-        }
+//        header.completion = {
+//            switch self.listType {
+//            case .contact:
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "AddNewContactViewController") as! AddNewContactViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            case .store:
+//                print("Add Store..")
+//            }
+//        }
     }
 
     func setupSearchBar() {

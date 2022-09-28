@@ -41,9 +41,9 @@ class ContactInformationViewController: UIViewController {
         header.titleLabel.text = "Contact"
         header.ctaButton.setTitle("Delete", for: .normal)
         header.ctaButton.setImage(UIImage(systemName: "trash.fill"), for: .normal)
-        header.completion = { [weak self] in
-            self?.deleteAction()
-        }
+//        header.completion = { [weak self] in
+//            self?.deleteAction()
+//        }
     
         self.tableView.tableHeaderView = header
         self.tableView.tableHeaderView?.frame.size.height = 60

@@ -6,23 +6,23 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 final class LoginViewModel {
-    var credencials = Credentials()
+    let authService: AuthServiceProtocol
+    var credencials = LoginCredentials()
     weak var presenter: LoginPresenter?
     
     init(presenter: LoginPresenter) {
+        authService = AuthService()
         self.presenter = presenter
     }
 
     func viewDidLoad() {
         // TODO: --
-//        AuthService.shared.logIn(withEmail: "barfira321@gmail.com",
-//                                 password: "admin1") { [weak self] result, error in
-//            if error != nil { return }
-//            self?.presenter?.navigateToDashboard()
-//        }
+        authService.logIn(with: .init(username: "barfira321@gmail.com", password: "admin1"), { [weak self] result, error in
+            if error != nil { return }
+            self?.presenter?.navigateToDashboard()
+        })
     }
 }
 
@@ -38,14 +38,12 @@ extension LoginViewModel {
         print("Did select password reset")
     }
     
-    @objc func didSelectLogin() {
-        Auth.auth().signIn(
-            withEmail: credencials.username,
-            password: credencials.password
-        ) { [weak self] result, error in
+    func didSelectLogin() {
+        authService.logIn(with: credencials) { [weak self] result, error in
             if error != nil { return }
 
             self?.presenter?.navigateToDashboard()
+            
         }
     }
     

@@ -8,9 +8,15 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-class UserService {
+protocol UserServiceProtocol {
+    func fetchUser(completion: @escaping ((UserDTO?) -> Void))
+    func setUser(_ user: UserDTO, completion: @escaping () -> Void)
+}
+
+class UserService: UserServiceProtocol {
+    // TODO: Remove
     static let shared = UserService()
-    
+
     func fetchUser(completion: @escaping ((UserDTO?) -> Void)) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
 

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView">
             <connections>
+                <outlet property="ctaButton" destination="R6J-hP-wXw" id="xmw-Eg-8Ds"/>
                 <outlet property="mailView" destination="ct3-yn-T7k" id="vxf-0M-yLL"/>
                 <outlet property="nameView" destination="42s-x7-pMp" id="iEL-EI-3WV"/>
                 <outlet property="passwordView" destination="4Mu-QL-KmW" id="7bO-Ph-gkB"/>
@@ -51,9 +52,6 @@
                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="black"/>
                                     </state>
-                                    <connections>
-                                        <action selector="ctaTapped:" destination="-1" eventType="touchUpInside" id="O5W-sq-kcv"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
