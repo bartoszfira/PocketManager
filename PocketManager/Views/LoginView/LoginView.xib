@@ -10,8 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView">
             <connections>
+                <outlet property="loginButton" destination="ruX-PX-qfc" id="eba-89-VBs"/>
                 <outlet property="loginView" destination="pvb-uR-UNw" id="Xd5-If-kg0"/>
+                <outlet property="passwordResetButton" destination="FJM-0B-KKC" id="RuQ-qM-Scs"/>
                 <outlet property="passwordView" destination="YMn-ky-AG3" id="J6g-ct-DrR"/>
+                <outlet property="registerButton" destination="rfd-6y-Clx" id="8QX-4c-hyz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -41,27 +44,18 @@
                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="black"/>
                                     </state>
-                                    <connections>
-                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="uxr-tS-Fxy"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-6y-Clx">
                                     <rect key="frame" x="16" y="50" width="133" height="30"/>
                                     <state key="normal" title="Create an account?">
                                         <color key="titleColor" red="0.22352941179999999" green="0.53725490200000003" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="5R7-Jr-CvT"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJM-0B-KKC">
                                     <rect key="frame" x="16" y="16" width="224" height="30"/>
                                     <state key="normal" title="Do not remember the password?">
                                         <color key="titleColor" red="0.22352941179999999" green="0.53725490200000003" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="passwordAction:" destination="-1" eventType="touchUpInside" id="2Rr-c9-hCs"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

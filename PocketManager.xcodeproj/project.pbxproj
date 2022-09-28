@@ -19,6 +19,9 @@
 		401EE667288061A600B03B73 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401EE666288061A600B03B73 /* UINavigationController+Extension.swift */; };
 		401EE66A2880718F00B03B73 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401EE6692880718F00B03B73 /* AuthService.swift */; };
 		401EE66C288183CC00B03B73 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401EE66B288183CB00B03B73 /* ProfileViewController.swift */; };
+		4057D6DA28E1E3AE00FE021D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */; };
+		4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */; };
+		4057D6DF28E1EC3A00FE021D /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6DE28E1EC3A00FE021D /* Credentials.swift */; };
 		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
 		4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* Double+Extension.swift */; };
 		4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* BalanceView.swift */; };
@@ -99,6 +102,9 @@
 		401EE666288061A600B03B73 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		401EE6692880718F00B03B73 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		401EE66B288183CB00B03B73 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		4057D6DE28E1EC3A00FE021D /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4058486C285CA84900DC76A2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4058486E285CCF0400DC76A2 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -219,11 +225,28 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		4057D6D828E1E37D00FE021D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4057D6D928E1E3AE00FE021D /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4057D6DB28E1E49700FE021D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4057D6DC28E1E4DF00FE021D /* LoginPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		40584869285C925C00DC76A2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				407D98DD2889A57100E9AF83 /* DTO */,
 				407D98DE2889A58400E9AF83 /* DealType.swift */,
+				4057D6DE28E1EC3A00FE021D /* Credentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,12 +381,14 @@
 		40E90C7C2858944F00A10CFD /* PocketMenager */ = {
 			isa = PBXGroup;
 			children = (
+				4057D6DB28E1E49700FE021D /* Presenters */,
 				40E90C7D2858944F00A10CFD /* AppDelegate.swift */,
 				40E90C7F2858944F00A10CFD /* SceneDelegate.swift */,
 				401EE6682880716000B03B73 /* Managers */,
 				40E90C982858AB8100A10CFD /* Commons */,
 				40584869285C925C00DC76A2 /* Models */,
 				40E90C9228589C6900A10CFD /* Views */,
+				4057D6D828E1E37D00FE021D /* ViewModel */,
 				40E90C9128589C3B00A10CFD /* Controllers */,
 				40E90C862858946400A10CFD /* Assets.xcassets */,
 				40E90C832858944F00A10CFD /* Main.storyboard */,
@@ -555,10 +580,12 @@
 				4058488528664B7B00DC76A2 /* InvoiceAddNewRecordView.swift in Sources */,
 				401EE66C288183CC00B03B73 /* ProfileViewController.swift in Sources */,
 				407D98E22889CA8000E9AF83 /* BlankWithControlView.swift in Sources */,
+				4057D6DA28E1E3AE00FE021D /* LoginViewModel.swift in Sources */,
 				401EE66A2880718F00B03B73 /* AuthService.swift in Sources */,
 				40BE66BA2874625400F76A08 /* CGFloat+Extension.swift in Sources */,
 				4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */,
 				407D98EC2897C6F300E9AF83 /* SearchStoreViewController.swift in Sources */,
+				4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */,
 				40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */,
 				40C52E932885D5370030189E /* String+Extension.swift in Sources */,
 				4058487F2866473B00DC76A2 /* BlankView.swift in Sources */,
@@ -593,6 +620,7 @@
 				4058487A2865B2DC00DC76A2 /* ContactsView.swift in Sources */,
 				40817E672869FFF70058666E /* UIVIewController+Extension.swift in Sources */,
 				407D98DF2889A58400E9AF83 /* DealType.swift in Sources */,
+				4057D6DF28E1EC3A00FE021D /* Credentials.swift in Sources */,
 				4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */,
 				401EE667288061A600B03B73 /* UINavigationController+Extension.swift in Sources */,
 				407D98D628898E3A00E9AF83 /* StoreDTO.swift in Sources */,

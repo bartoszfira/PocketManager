@@ -9,60 +9,64 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var loginView: LoginView!
+    
+    var viewModel: LoginViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+        viewModel = LoginViewModel(presenter: self)
+
+        hideKeyboardWhenTappedAround()
         setupActions()
 
-        // TODO: --
-//        AuthService.shared.logIn(withEmail: "barfira321@gmail.com",
-//                                 password: "admin1") { [weak self] result, error in
-//            if error != nil { return }
-//            DispatchQueue.main.async {
-//                self?.navigationController?.replaceWith(UITabBarController.instantiate(controllerId: "MainTabBarController"))
-//            }
-//        }
+        viewModel?.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
     }
     
     func setupActions() {
-        loginView.loginCompletion = { self.logIn() }
-        loginView.registerCompletion = { self.displayRegister() }
+        loginView.passwordResetButton.addTarget(
+            viewModel,
+            action: #selector(viewModel?.didSelectPasswordReset),
+            for: .touchUpInside
+        )
+        loginView.registerButton.addTarget(
+            viewModel,
+            action: #selector(viewModel?.didSelectRegister),
+            for: .touchUpInside
+        )
+        loginView.loginButton.addTarget(
+            self,
+            action: #selector(loginSelected),
+            for: .touchUpInside
+        )
     }
-    
-    func displayRegister() {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-       
-    }
-    
 
-    func logIn() {
-        guard let email = loginView.loginView.dataTextField.text,
-              let password = loginView.passwordView.dataTextField.text else {
-            return
+    @objc func loginSelected() {
+        viewModel?.updateCredentials(
+            with: loginView.loginView.dataTextField.text,
+            and: loginView.passwordView.dataTextField.text
+        )
+
+        viewModel?.didSelectLogin()
+    }
+}
+
+extension LoginViewController: LoginPresenter {
+    func navigateToDashboard() {
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.replaceWith(UITabBarController.instantiate(controllerId: "MainTabBarController"))
         }
-
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-            if error != nil { return }
-
-            // success
-            print(Auth.auth().currentUser)
-            DispatchQueue.main.async {
-                self?.navigationController?.replaceWith(UITabBarController.instantiate(controllerId: "MainTabBarController"))
-            }
-        }
+    }
+    
+    func navigateToRegister() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
-    
-    
 }

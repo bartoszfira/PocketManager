@@ -9,25 +9,13 @@ import UIKit
 
 class LoginView: UIView, NibLoadable {
     var contentView: UIView?
-    
-    var loginCompletion: (() -> Void)?
-    var registerCompletion: (() -> Void)?
-    var passwordCompletion: (() -> Void)?
-    
+
     @IBOutlet weak var loginView: BlankView!
     @IBOutlet weak var passwordView: BlankView!
     
-    @IBAction func passwordAction(_ sender: Any) {
-        passwordCompletion?()
-    }
-    @IBAction func registerAction(_ sender: Any) {
-        registerCompletion?()
-    }
-    
-    @IBAction func loginAction(_ sender: Any) {
-        loginCompletion?()
-    }
-    
+    @IBOutlet weak var passwordResetButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
