@@ -32,6 +32,8 @@
 		4057D6F228E4733900FE021D /* TitleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F128E4733900FE021D /* TitleListPresenter.swift */; };
 		4057D6F428E473E600FE021D /* TitleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F328E473E600FE021D /* TitleListViewModel.swift */; };
 		4057D6F628E47BA000FE021D /* TitleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F528E47BA000FE021D /* TitleListDataSource.swift */; };
+		4057D6F828E5BA1900FE021D /* AddNewRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */; };
+		4057D6FA28E5BCAF00FE021D /* AddNewRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */; };
 		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
 		4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* Double+Extension.swift */; };
 		4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* BalanceView.swift */; };
@@ -125,6 +127,8 @@
 		4057D6F128E4733900FE021D /* TitleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListPresenter.swift; sourceTree = "<group>"; };
 		4057D6F328E473E600FE021D /* TitleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListViewModel.swift; sourceTree = "<group>"; };
 		4057D6F528E47BA000FE021D /* TitleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListDataSource.swift; sourceTree = "<group>"; };
+		4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecordPresenter.swift; sourceTree = "<group>"; };
+		4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecordViewModel.swift; sourceTree = "<group>"; };
 		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4058486C285CA84900DC76A2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4058486E285CCF0400DC76A2 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				4057D6E028E4424000FE021D /* RegisterViewModel.swift */,
 				4057D6E728E4550100FE021D /* DashboardViewModel.swift */,
 				4057D6F328E473E600FE021D /* TitleListViewModel.swift */,
+				4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				4057D6E228E4427700FE021D /* RegisterPresenter.swift */,
 				4057D6E928E4554900FE021D /* DashboardPresenter.swift */,
 				4057D6F128E4733900FE021D /* TitleListPresenter.swift */,
+				4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				40E90C9A2858ABAD00A10CFD /* UIView+Extension.swift in Sources */,
 				4057D6F428E473E600FE021D /* TitleListViewModel.swift in Sources */,
 				40E90C802858944F00A10CFD /* SceneDelegate.swift in Sources */,
+				4057D6FA28E5BCAF00FE021D /* AddNewRecordViewModel.swift in Sources */,
 				40817E6B286EEE720058666E /* ContactsViewController.swift in Sources */,
 				407D98D428893A9400E9AF83 /* TitleListViewController.swift in Sources */,
 				40BE669E287305F700F76A08 /* InitialView.swift in Sources */,
@@ -651,6 +658,7 @@
 				407D98D12889346600E9AF83 /* SimpleTableViewCell.swift in Sources */,
 				401EE657287DC36400B03B73 /* LoginViewController.swift in Sources */,
 				405848752864C2D800DC76A2 /* ScrapBalanceView.swift in Sources */,
+				4057D6F828E5BA1900FE021D /* AddNewRecordPresenter.swift in Sources */,
 				4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */,
 				401EE659287DC3AA00B03B73 /* RegisterViewController.swift in Sources */,
 				4057D6E628E444DF00FE021D /* RegistrationCredencial.swift in Sources */,

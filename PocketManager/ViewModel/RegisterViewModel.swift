@@ -8,12 +8,12 @@
 import Foundation
 
 final class RegisterViewModel {
-    let authSercice: AuthServiceProtocol
+    let authService: AuthServiceProtocol
     var registerCredeintials: RegistrationCredencial
     weak var presenter: RegisterPresenter?
 
     init(presenter: RegisterPresenter) {
-        authSercice = AuthService()
+        authService = AuthService()
         registerCredeintials = RegistrationCredencial()
         self.presenter = presenter
     }
@@ -27,7 +27,7 @@ extension RegisterViewModel {
 
 extension RegisterViewModel {
     func didSelectRegister() {
-        authSercice.create(
+        authService.create(
             with: registerCredeintials) { [weak self] error in
             if let error = error {
                 return

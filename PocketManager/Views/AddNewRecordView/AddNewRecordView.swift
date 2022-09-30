@@ -19,11 +19,11 @@ class AddNewRecordView: UIView, NibLoadable {
     @IBOutlet weak var amountView: BlankWithControlView!
     @IBOutlet weak var dateView: BlankView!
     @IBOutlet weak var invoiceView: InvoiceAddNewRecordView!
-
+    @IBOutlet weak var ctaButton: UIButton!
     
-    @IBAction func ctaTapped(_ sender: Any) {
-        completion?()
-    }
+//    @IBAction func ctaTapped(_ sender: Any) {
+//        completion?()
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
