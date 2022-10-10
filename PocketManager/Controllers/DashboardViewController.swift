@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         viewModel = DashboardViewModel(presenter: self)
+        setupActions()
     }
 
     override func viewWillAppear(_ animated: Bool) {

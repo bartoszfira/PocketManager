@@ -34,6 +34,13 @@
 		4057D6F628E47BA000FE021D /* TitleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F528E47BA000FE021D /* TitleListDataSource.swift */; };
 		4057D6F828E5BA1900FE021D /* AddNewRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */; };
 		4057D6FA28E5BCAF00FE021D /* AddNewRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */; };
+		4057D6FE28EC3CB600FE021D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6FD28EC3CB600FE021D /* ProfilePresenter.swift */; };
+		4057D70028EC3CFC00FE021D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D6FF28EC3CFB00FE021D /* ProfileViewModel.swift */; };
+		4057D70228EC569F00FE021D /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D70128EC569F00FE021D /* TransactionsPresenter.swift */; };
+		4057D70428EC5CBD00FE021D /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D70328EC5CBC00FE021D /* TransactionsViewModel.swift */; };
+		4057D70628EC654A00FE021D /* TransactionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D70528EC654A00FE021D /* TransactionsDataSource.swift */; };
+		4057D70828EC6C9B00FE021D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D70728EC6C9B00FE021D /* ContactsViewModel.swift */; };
+		4057D70A28EC6CFC00FE021D /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057D70928EC6CFC00FE021D /* ContactsPresenter.swift */; };
 		4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486A285C92E400DC76A2 /* TransactionDTO.swift */; };
 		4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486C285CA84900DC76A2 /* Double+Extension.swift */; };
 		4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058486E285CCF0400DC76A2 /* BalanceView.swift */; };
@@ -63,6 +70,14 @@
 		40817E672869FFF70058666E /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40817E662869FFF70058666E /* UIVIewController+Extension.swift */; };
 		40817E69286B63090058666E /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40817E68286B63090058666E /* TransactionsViewController.swift */; };
 		40817E6B286EEE720058666E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40817E6A286EEE720058666E /* ContactsViewController.swift */; };
+		40BE39E628EC847B007405F1 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39E528EC847B007405F1 /* ContactsDataSource.swift */; };
+		40BE39E828EEF41C007405F1 /* AddNewContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39E728EEF41C007405F1 /* AddNewContactPresenter.swift */; };
+		40BE39EA28EEF454007405F1 /* AddNewContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39E928EEF454007405F1 /* AddNewContactViewModel.swift */; };
+		40BE39EC28EF24CF007405F1 /* ContactInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39EB28EF24CF007405F1 /* ContactInformationPresenter.swift */; };
+		40BE39EE28EF2630007405F1 /* ContactInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39ED28EF2630007405F1 /* ContactInformationViewModel.swift */; };
+		40BE39F028EF38FE007405F1 /* ContactInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */; };
+		40BE39F228F451BB007405F1 /* EditContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F128F451BB007405F1 /* EditContactPresenter.swift */; };
+		40BE39F428F451F5007405F1 /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F328F451F5007405F1 /* EditContactViewModel.swift */; };
 		40BE669E287305F700F76A08 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE669D287305F700F76A08 /* InitialView.swift */; };
 		40BE66A02873060700F76A08 /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BE669F2873060700F76A08 /* InitialView.xib */; };
 		40BE66A328730CF800F76A08 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */; };
@@ -129,6 +144,13 @@
 		4057D6F528E47BA000FE021D /* TitleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListDataSource.swift; sourceTree = "<group>"; };
 		4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecordPresenter.swift; sourceTree = "<group>"; };
 		4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecordViewModel.swift; sourceTree = "<group>"; };
+		4057D6FD28EC3CB600FE021D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		4057D6FF28EC3CFB00FE021D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		4057D70128EC569F00FE021D /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		4057D70328EC5CBC00FE021D /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		4057D70528EC654A00FE021D /* TransactionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDataSource.swift; sourceTree = "<group>"; };
+		4057D70728EC6C9B00FE021D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		4057D70928EC6CFC00FE021D /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
 		4058486A285C92E400DC76A2 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4058486C285CA84900DC76A2 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4058486E285CCF0400DC76A2 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -158,6 +180,14 @@
 		40817E662869FFF70058666E /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
 		40817E68286B63090058666E /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		40817E6A286EEE720058666E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		40BE39E528EC847B007405F1 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
+		40BE39E728EEF41C007405F1 /* AddNewContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactPresenter.swift; sourceTree = "<group>"; };
+		40BE39E928EEF454007405F1 /* AddNewContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewModel.swift; sourceTree = "<group>"; };
+		40BE39EB28EF24CF007405F1 /* ContactInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationPresenter.swift; sourceTree = "<group>"; };
+		40BE39ED28EF2630007405F1 /* ContactInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationViewModel.swift; sourceTree = "<group>"; };
+		40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationDataSource.swift; sourceTree = "<group>"; };
+		40BE39F128F451BB007405F1 /* EditContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactPresenter.swift; sourceTree = "<group>"; };
+		40BE39F328F451F5007405F1 /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
 		40BE669D287305F700F76A08 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40BE669F2873060700F76A08 /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
 		40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +287,12 @@
 				4057D6E728E4550100FE021D /* DashboardViewModel.swift */,
 				4057D6F328E473E600FE021D /* TitleListViewModel.swift */,
 				4057D6F928E5BCAF00FE021D /* AddNewRecordViewModel.swift */,
+				4057D6FF28EC3CFB00FE021D /* ProfileViewModel.swift */,
+				4057D70328EC5CBC00FE021D /* TransactionsViewModel.swift */,
+				4057D70728EC6C9B00FE021D /* ContactsViewModel.swift */,
+				40BE39E928EEF454007405F1 /* AddNewContactViewModel.swift */,
+				40BE39ED28EF2630007405F1 /* ContactInformationViewModel.swift */,
+				40BE39F328F451F5007405F1 /* EditContactViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,6 +305,12 @@
 				4057D6E928E4554900FE021D /* DashboardPresenter.swift */,
 				4057D6F128E4733900FE021D /* TitleListPresenter.swift */,
 				4057D6F728E5BA1800FE021D /* AddNewRecordPresenter.swift */,
+				4057D6FD28EC3CB600FE021D /* ProfilePresenter.swift */,
+				4057D70128EC569F00FE021D /* TransactionsPresenter.swift */,
+				4057D70928EC6CFC00FE021D /* ContactsPresenter.swift */,
+				40BE39E728EEF41C007405F1 /* AddNewContactPresenter.swift */,
+				40BE39EB28EF24CF007405F1 /* ContactInformationPresenter.swift */,
+				40BE39F128F451BB007405F1 /* EditContactPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -278,6 +320,9 @@
 			children = (
 				4057D6ED28E460D500FE021D /* DashboardDataSource.swift */,
 				4057D6F528E47BA000FE021D /* TitleListDataSource.swift */,
+				4057D70528EC654A00FE021D /* TransactionsDataSource.swift */,
+				40BE39E528EC847B007405F1 /* ContactsDataSource.swift */,
+				40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */,
 			);
 			path = DataSoruce;
 			sourceTree = "<group>";
@@ -617,20 +662,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BE39EE28EF2630007405F1 /* ContactInformationViewModel.swift in Sources */,
+				4057D70828EC6C9B00FE021D /* ContactsViewModel.swift in Sources */,
+				4057D70A28EC6CFC00FE021D /* ContactsPresenter.swift in Sources */,
 				401EE661287DC6B100B03B73 /* RegisterView.swift in Sources */,
 				40C52E9B288887170030189E /* ContactService.swift in Sources */,
+				4057D70428EC5CBD00FE021D /* TransactionsViewModel.swift in Sources */,
 				407D98D828898F2200E9AF83 /* StoreService.swift in Sources */,
 				40E90C822858944F00A10CFD /* DashboardViewController.swift in Sources */,
+				40BE39F228F451BB007405F1 /* EditContactPresenter.swift in Sources */,
 				4058488528664B7B00DC76A2 /* InvoiceAddNewRecordView.swift in Sources */,
 				401EE66C288183CC00B03B73 /* ProfileViewController.swift in Sources */,
+				40BE39F428F451F5007405F1 /* EditContactViewModel.swift in Sources */,
 				4057D6F228E4733900FE021D /* TitleListPresenter.swift in Sources */,
 				407D98E22889CA8000E9AF83 /* BlankWithControlView.swift in Sources */,
 				4057D6DA28E1E3AE00FE021D /* LoginViewModel.swift in Sources */,
 				401EE66A2880718F00B03B73 /* AuthService.swift in Sources */,
+				4057D6FE28EC3CB600FE021D /* ProfilePresenter.swift in Sources */,
 				40BE66BA2874625400F76A08 /* CGFloat+Extension.swift in Sources */,
 				4058486B285C92E400DC76A2 /* TransactionDTO.swift in Sources */,
+				40BE39EA28EEF454007405F1 /* AddNewContactViewModel.swift in Sources */,
+				40BE39F028EF38FE007405F1 /* ContactInformationDataSource.swift in Sources */,
 				4057D6EB28E4566200FE021D /* DashboardPresenter.swift in Sources */,
 				407D98EC2897C6F300E9AF83 /* SearchStoreViewController.swift in Sources */,
+				40BE39E828EEF41C007405F1 /* AddNewContactPresenter.swift in Sources */,
+				4057D70028EC3CFC00FE021D /* ProfileViewModel.swift in Sources */,
 				4057D6DD28E1E4DF00FE021D /* LoginPresenter.swift in Sources */,
 				4057D6F628E47BA000FE021D /* TitleListDataSource.swift in Sources */,
 				40E90C9628589FB400A10CFD /* TransactionsTableViewCell.swift in Sources */,
@@ -671,6 +727,7 @@
 				407D98E82892C1A900E9AF83 /* UserDTO.swift in Sources */,
 				40C8E1C32881B20800839091 /* Encodable+Extension.swift in Sources */,
 				4058487A2865B2DC00DC76A2 /* ContactsView.swift in Sources */,
+				40BE39E628EC847B007405F1 /* ContactsDataSource.swift in Sources */,
 				4057D6E828E4550100FE021D /* DashboardViewModel.swift in Sources */,
 				40817E672869FFF70058666E /* UIVIewController+Extension.swift in Sources */,
 				407D98DF2889A58400E9AF83 /* DealType.swift in Sources */,
@@ -681,9 +738,12 @@
 				407D98D628898E3A00E9AF83 /* StoreDTO.swift in Sources */,
 				4057D6E128E4424000FE021D /* RegisterViewModel.swift in Sources */,
 				40C52E9C2888871B0030189E /* TransactionService.swift in Sources */,
+				4057D70628EC654A00FE021D /* TransactionsDataSource.swift in Sources */,
 				40F139BA2858EC4400FC4B7D /* Nib+Extension.swift in Sources */,
 				401EE65C287DC58800B03B73 /* LoginView.swift in Sources */,
 				4058488D286653AA00DC76A2 /* AddNewRecordView.swift in Sources */,
+				40BE39EC28EF24CF007405F1 /* ContactInformationPresenter.swift in Sources */,
+				4057D70228EC569F00FE021D /* TransactionsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

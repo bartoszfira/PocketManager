@@ -10,13 +10,16 @@ import UIKit
 
 class EditContactViewController: UIViewController {
     
+    weak var delegate: ContactInformationDelegate?
+    var viewModel: EditContactViewModel?
+    
     var contact: ContactDTO?
-    weak var delegate: ContactInformaitonDelegate?
- 
+    
     @IBOutlet weak var contactView: AddNewContactView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = EditContactViewModel(presenter: self)
         setupView()
         setupField()
         
@@ -86,5 +89,19 @@ class EditContactViewController: UIViewController {
     }
     
 
+}
+
+extension EditContactViewController: EditContactPresenter {
+    func navigateToContactInformation() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func clearFields() {
+        contactView.nameView.dataTextField.text = ""
+        contactView.surenameView.dataTextField.text = ""
+        contactView.mailView.dataTextField.text = ""
+    }
+    
+    
 }
 

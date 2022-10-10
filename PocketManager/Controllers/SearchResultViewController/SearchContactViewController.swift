@@ -22,7 +22,7 @@ class SearchContactViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchData() // przeniesienie danych z poprzedniego widoku
+        fetchData()
     }
     
     func filterContentForSearchText (searchText: String) {
@@ -57,7 +57,7 @@ class SearchContactViewController: UIViewController {
         let vc = storyboard.instantiateViewController(identifier: "ContactInformationViewController") as! ContactInformationViewController
         self.presentingViewController?.navigationController?.pushViewController(vc, animated: true)
         // setup
-        vc.contact = contact
+        vc.dataSource.contact = contact
     }
 
 }

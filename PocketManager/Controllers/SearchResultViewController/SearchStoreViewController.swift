@@ -22,7 +22,7 @@ class SearchStoreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchData() // przeniesienie danych z poprzedniego widoku
+        fetchData()
     }
     
     func filterContentForSearchText (searchText: String) {

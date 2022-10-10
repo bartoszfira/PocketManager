@@ -18,10 +18,6 @@ class AddNewContactView: UIView, NibLoadable {
     @IBOutlet weak var ctaButton: UIButton!
     
     
-    @IBAction func ctaTapped(_ sender: Any) {
-        completion?()
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib()

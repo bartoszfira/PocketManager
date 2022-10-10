@@ -116,9 +116,6 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
                                 </state>
-                                <connections>
-                                    <action selector="logoutTapped:" destination="tQW-Nb-TJc" eventType="touchUpInside" id="b18-OO-elE"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-TG-Sm9">
                                 <rect key="frame" x="16" y="76" width="382" height="76"/>
@@ -152,9 +149,6 @@
                                         <state key="normal" title="Button" image="square.and.pencil" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                                         </state>
-                                        <connections>
-                                            <action selector="editTapped:" destination="tQW-Nb-TJc" eventType="touchUpInside" id="vzS-lY-ugB"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -188,7 +182,9 @@
                         <imageReference key="image" image="person" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="editButton" destination="uhU-HI-XH1" id="0mh-kX-wkZ"/>
                         <outlet property="initialView" destination="Oe4-Nt-ROo" id="K2R-BY-Yew"/>
+                        <outlet property="logoutButton" destination="2Hv-CS-Vco" id="ubp-zY-M2q"/>
                         <outlet property="mailLabel" destination="Ooj-2C-91H" id="oao-va-1He"/>
                         <outlet property="personalsLabel" destination="Txg-U5-Deb" id="9ot-5F-0Lx"/>
                     </connections>
