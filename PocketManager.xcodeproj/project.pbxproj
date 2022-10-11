@@ -84,6 +84,9 @@
 		40BE39FC28F5AAC8007405F1 /* SearchContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */; };
 		40BE39FE28F5AADE007405F1 /* SearchContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */; };
 		40BE3A0028F5AB6F007405F1 /* SearchContactDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */; };
+		40BE3A0228F5D4B7007405F1 /* SearchStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE3A0128F5D4B7007405F1 /* SearchStoreViewModel.swift */; };
+		40BE3A0428F5D4D6007405F1 /* SearchStorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE3A0328F5D4D6007405F1 /* SearchStorePresenter.swift */; };
+		40BE3A0628F5D522007405F1 /* SearchStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE3A0528F5D522007405F1 /* SearchStoreDataSource.swift */; };
 		40BE669E287305F700F76A08 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE669D287305F700F76A08 /* InitialView.swift */; };
 		40BE66A02873060700F76A08 /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BE669F2873060700F76A08 /* InitialView.xib */; };
 		40BE66A328730CF800F76A08 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */; };
@@ -200,6 +203,9 @@
 		40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactViewModel.swift; sourceTree = "<group>"; };
 		40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactPresenter.swift; sourceTree = "<group>"; };
 		40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactDataSource.swift; sourceTree = "<group>"; };
+		40BE3A0128F5D4B7007405F1 /* SearchStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreViewModel.swift; sourceTree = "<group>"; };
+		40BE3A0328F5D4D6007405F1 /* SearchStorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStorePresenter.swift; sourceTree = "<group>"; };
+		40BE3A0528F5D522007405F1 /* SearchStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreDataSource.swift; sourceTree = "<group>"; };
 		40BE669D287305F700F76A08 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40BE669F2873060700F76A08 /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
 		40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -307,6 +313,7 @@
 				40BE39F328F451F5007405F1 /* EditContactViewModel.swift */,
 				40BE39F728F58F7A007405F1 /* SearchTransactionViewModel.swift */,
 				40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */,
+				40BE3A0128F5D4B7007405F1 /* SearchStoreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 				40BE39F128F451BB007405F1 /* EditContactPresenter.swift */,
 				40BE39F528F58F4E007405F1 /* SearchTransactionPresenter.swift */,
 				40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */,
+				40BE3A0328F5D4D6007405F1 /* SearchStorePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 				40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */,
 				40BE39F928F590AB007405F1 /* SearchTransactionDataSource.swift */,
 				40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */,
+				40BE3A0528F5D522007405F1 /* SearchStoreDataSource.swift */,
 			);
 			path = DataSoruce;
 			sourceTree = "<group>";
@@ -719,10 +728,12 @@
 				4057D6F028E472E400FE021D /* ListableTapGestureRecognizer.swift in Sources */,
 				40E90C7E2858944F00A10CFD /* AppDelegate.swift in Sources */,
 				40817E69286B63090058666E /* TransactionsViewController.swift in Sources */,
+				40BE3A0228F5D4B7007405F1 /* SearchStoreViewModel.swift in Sources */,
 				40C52E9D288887200030189E /* UserService.swift in Sources */,
 				40E90C9A2858ABAD00A10CFD /* UIView+Extension.swift in Sources */,
 				4057D6F428E473E600FE021D /* TitleListViewModel.swift in Sources */,
 				40E90C802858944F00A10CFD /* SceneDelegate.swift in Sources */,
+				40BE3A0428F5D4D6007405F1 /* SearchStorePresenter.swift in Sources */,
 				4057D6FA28E5BCAF00FE021D /* AddNewRecordViewModel.swift in Sources */,
 				40817E6B286EEE720058666E /* ContactsViewController.swift in Sources */,
 				407D98D428893A9400E9AF83 /* TitleListViewController.swift in Sources */,
@@ -754,6 +765,7 @@
 				407D98DF2889A58400E9AF83 /* DealType.swift in Sources */,
 				40BE39F628F58F4E007405F1 /* SearchTransactionPresenter.swift in Sources */,
 				4057D6DF28E1EC3A00FE021D /* LoginCredentials.swift in Sources */,
+				40BE3A0628F5D522007405F1 /* SearchStoreDataSource.swift in Sources */,
 				4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */,
 				4057D6E328E4427700FE021D /* RegisterPresenter.swift in Sources */,
 				401EE667288061A600B03B73 /* UINavigationController+Extension.swift in Sources */,
