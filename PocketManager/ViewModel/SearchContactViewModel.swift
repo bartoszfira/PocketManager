@@ -18,19 +18,20 @@ final class SearchContactViewModel {
         self.presenter = presenter
         contactService = ContactService()
     }
+    
     func viewWillAppear() {
         fetchData()
     }
 }
 
 extension SearchContactViewModel {
-    
     func fetchData() {
         contactService.fetchFriends { [weak self] contacts in
             self?.contacts = contacts ?? []
             self?.presenter?.reloadContactData(contacts: contacts)
         }
     }
+    
     func filterContentForSearchText(with searchText: String? = nil) {
         self.searchText = searchText?.lowercased() ?? self.searchText
         var filtred: [ContactDTO] = []

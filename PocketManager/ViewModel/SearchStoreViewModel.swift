@@ -19,19 +19,20 @@ final class SearchStoreViewModel {
         self.presenter = presenter
         storeService = StoreService()
     }
+
     func viewWillAppear() {
         fetchData()
     }
 }
 
 extension SearchStoreViewModel {
-    
     func fetchData() {
         storeService.fetchStores { [weak self] store in
             self?.store = store ?? []
             self?.presenter?.reloadStoreData(stores: store)
         }
     }
+
     func filterContentForSearchText(with searchText: String? = nil) {
         self.searchText = searchText?.lowercased() ?? self.searchText
         var filtered: [StoreDTO] = []
