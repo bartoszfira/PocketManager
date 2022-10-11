@@ -8,38 +8,44 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
     @IBOutlet weak var registerView: RegisterView!
+
+    var viewModel: RegisterViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        viewModel = RegisterViewModel(presenter: self)
 
-        registerView.completion = {
-            if self.registerView.mailView.dataTextField.text != "" ||
-                self.registerView.nameView.dataTextField.text != "" ||
-                self.registerView.surnameView.dataTextField.text != "" ||
-                self.registerView.passwordView.dataTextField.text != ""
-            {
-            self.register()
-            }
-        }
+        setupActions()
     }
     
-    func register() {
-        guard let mail = registerView.mailView.dataTextField.text,
-              let password = registerView.passwordView.dataTextField.text,
-              let name = registerView.nameView.dataTextField.text,
-              let surname = registerView.surnameView.dataTextField.text else {
-            return
-        }
-        
-        AuthService.shared.create(name: name, surname: surname, mail: mail, password: password) { error in
-            print("OK")
-        }
+    func setupActions() {
+        registerView.ctaButton.addTarget(
+            self,
+            action: #selector(didSelectRegister),
+            for: .touchUpInside
+        )
+    }
+
+    @objc func didSelectRegister() {
+        viewModel?.updateCredentials(
+            .init(
+                email: registerView.mailView.dataTextField.text,
+                name: registerView.nameView.dataTextField.text,
+                surname: registerView.surnameView.dataTextField.text,
+                password: registerView.passwordView.dataTextField.text
+            )
+        )
+
+        viewModel?.didSelectRegister()
+    }
+    
+}
+
+extension RegisterViewController: RegisterPresenter {
+    func navigateToLogin() {
         self.navigationController?.popViewController(animated: true)
-        
     }
-    
 }

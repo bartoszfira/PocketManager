@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewRecordView" customModule="PocketManager" customModuleProvider="target">
             <connections>
                 <outlet property="amountView" destination="eW0-Lv-96m" id="imE-Xg-IWT"/>
+                <outlet property="ctaButton" destination="rgk-pg-DUZ" id="k2I-QD-3lw"/>
                 <outlet property="dateView" destination="lHc-gO-aDi" id="VuQ-Bp-cXC"/>
                 <outlet property="invoiceView" destination="MVa-Tq-qv2" id="vHq-1h-DXg"/>
                 <outlet property="nameView" destination="J8z-r3-rd4" id="eoZ-QY-tm3"/>
@@ -51,9 +52,6 @@
                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                     </state>
-                                    <connections>
-                                        <action selector="ctaTapped:" destination="-1" eventType="touchUpInside" id="F8p-ue-VTD"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

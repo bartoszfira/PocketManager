@@ -8,7 +8,14 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-class ContactService {
+protocol ContactServiceProtocol {
+    func delete(_ contact: ContactDTO, completion: ((Error?) -> Void)?)
+    func addNew(_ contact: ContactDTO, completion: @escaping () -> Void)
+    func fetchFriends(completion: @escaping (([ContactDTO]?) -> Void))
+    func fetchFriend(id: String, completion: @escaping ((ContactDTO?) -> Void))
+}
+
+class ContactService: ContactServiceProtocol {
     static let shared = ContactService()
     
     func delete(_ contact: ContactDTO, completion: ((Error?) -> Void)?) {

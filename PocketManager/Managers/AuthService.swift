@@ -9,17 +9,25 @@ import Firebase
 
 typealias AuthResult = ((AuthDataResult?, Error?) -> Void)
 
-class AuthService {
-    static let shared = AuthService()
+protocol AuthServiceProtocol {
+    func logIn(with credencials: LoginCredentials, _ completion: AuthResult?)
+    func create(with credencials: RegistrationCredencial, completion: @escaping ((Error?)-> Void))
+}
 
-    // logowanie
-    public func logIn(withEmail mail: String, password: String, completion: AuthResult?) {
-        Auth.auth().signIn(withEmail: mail, password: password, completion: completion)
+class AuthService: AuthServiceProtocol {
+    func logIn(with credencials: LoginCredentials, _ completion: AuthResult?) {
+        Auth.auth().signIn(withEmail: credencials.username, password: credencials.password, completion: completion)
     }
 
-    // rejestracja
-    public func create(name: String = "", surname: String = "", mail: String, password: String, completion: @escaping ((Error?)-> Void)) {
-        Auth.auth().createUser(withEmail: mail, password: password) { result, error in
+    func create(with credencials: RegistrationCredencial, completion: @escaping ((Error?)-> Void)) {
+        guard
+            let email = credencials.email,
+            let password = credencials.password
+        else {
+            return
+        }
+
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("DEBUG: ~ Failed to create user ERROR - \(error.localizedDescription)")
                 return
@@ -27,10 +35,10 @@ class AuthService {
 
             guard let uid = result?.user.uid else { return }
 
-            let data = ["mail": mail,
+            let data = ["mail": email,
                         "userId": uid,
-                        "name": name,
-                        "surname": surname,
+                        "name": credencials.name ?? "",
+                        "surname": credencials.surname ?? "",
                         "balance": 0.0,
                         "expenses": 0.0,
                         "income": 0.0 ] as [String : Any]

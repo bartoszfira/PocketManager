@@ -11,12 +11,14 @@ class TransactionsViewController: UIViewController {
     
     @IBOutlet weak var transactionsTableView: UITableView!
     var searchBar: UISearchController?
+    var viewModel: TransactionsViewModel?
+    var dataSource = TransactionsDataSource()
 
-    var transactions: [TransactionDTO]? = []
     let header = HeaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = TransactionsViewModel(presenter: self)
         setupSearchBar()
         setupTable()
         setupHeader()
@@ -25,14 +27,14 @@ class TransactionsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchData()
+        viewModel?.viewWillAppear()
     }
     
     func setupTable() {
         transactionsTableView.register(TransactionsTableViewCell.getNib, forCellReuseIdentifier: TransactionsTableViewCell.identifier)
         
-        transactionsTableView.delegate = self
-        transactionsTableView.dataSource = self
+        transactionsTableView.delegate = dataSource
+        transactionsTableView.dataSource = dataSource
         
         self.transactionsTableView.tableHeaderView = header
         self.transactionsTableView.tableHeaderView?.frame.size.height = 60
@@ -47,48 +49,16 @@ class TransactionsViewController: UIViewController {
         searchBar = UISearchController(searchResultsController: resultController)
 
         navigationItem.searchController = searchBar
-//        searchBar?.showsSearchResultsController = true
         searchBar?.searchBar.scopeButtonTitles = ["All","Income","Expenses"]
         searchBar?.searchBar.delegate = resultController
         searchBar?.searchBar.placeholder = "Search Transaction..."
         searchBar?.searchBar.sizeToFit()
     }
-    
-    func fetchData() {
-        TransactionService.shared.fetchTransactions { [weak self] transactions in
-            self?.transactions = transactions
-            self?.transactionsTableView.reloadData()
-        }
-    }
-    
 }
 
-extension TransactionsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transactions?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {  
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionsTableViewCell.identifier, for: indexPath) as? TransactionsTableViewCell,
-              let transactions = transactions else {
-            return UITableViewCell()
-        }
-
-        cell.configure(description: transactions[indexPath.row].name,
-                       date: transactions[indexPath.row].date.shortDate,
-                       amount: transactions[indexPath.row].amount.toString,
-                       initial: transactions[indexPath.row].initial,
-                       icon: nil,
-                       type: transactions[indexPath.row].type)
-
-        return cell
-
-    }
-    
-}
-
-extension TransactionsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72
+extension TransactionsViewController: TransactionsPresenter {
+    func reloadTableData(with data: [TransactionDTO]?) {
+        dataSource.transactions = data
+        transactionsTableView.reloadData()
     }
 }

@@ -9,7 +9,14 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-class TransactionService {
+protocol TransactionServiceProtocol {
+    func addNew(_ transaction: TransactionDTO, completion: @escaping () -> Void)
+    func fetchTransactions(completion: @escaping (([TransactionDTO]?) -> Void))
+    func fetchTransactions(with userId: String, completion: @escaping (([TransactionDTO]?) -> Void))
+}
+
+class TransactionService: TransactionServiceProtocol {
+    // TODO: Remove
     static let shared = TransactionService()
     
     func addNew(_ transaction: TransactionDTO, completion: @escaping () -> Void) {

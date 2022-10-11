@@ -13,55 +13,40 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var initialView: InitialView!
     @IBOutlet weak var personalsLabel: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
-    @IBAction func editTapped(_ sender: Any) {
-    }
-    
-    @IBAction func logoutTapped(_ sender: Any) { logout() }
-    
-    var user: UserDTO?
-    
+    var viewModel: ProfileViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-  
-    
+        viewModel = ProfileViewModel(presenter: self)
+        viewModel?.viewDidLoad()
+        setupActions()
     }
- 
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-            DispatchQueue.main.async {
-                self.navigationController?.replaceWith(LoginViewController.instantiate(controllerId: "LoginViewController"))
-                print(Auth.auth().currentUser)
-               
-            }
-        } catch let error {
-            print(error)
+    
+    func setupActions() {
+        let logoutAction = UIAction { [weak self] _ in
+            self?.viewModel?.didSelectLogout()
         }
-    }
+        logoutButton.addAction(logoutAction, for: .touchUpInside)
+        
+        let editAction = UIAction { [weak self] _ in
     
-    func setupView() {
-        fetchUser()
-    }
-    
-    func fetchUser() {
-        UserService.shared.fetchUser() { [weak self] user in
-            self?.user = user
-            self?.setupLabel()
-
-            print(user)
         }
+        editButton.addAction(editAction, for: .touchUpInside)
     }
     
-    func setupLabel() {
-        guard let user = user else {
-            print("Error, user is nil in setupLabel ")
-            return
-        }
-        initialView.label.text = user.initial
-        personalsLabel.text = user.fullName
-        mailLabel.text = user.mail
+}
+extension ProfileViewController: ProfilePresenter {
+    
+    func navigateToLogin() {
+        self.navigationController?.replaceWith(LoginViewController.instantiate(controllerId: "LoginViewController"))
     }
 
+    func updateView(with user: UserDTO?) {
+        initialView.label.text = user?.initial
+        personalsLabel.text = user?.fullName
+        mailLabel.text = user?.mail
+    }
 }

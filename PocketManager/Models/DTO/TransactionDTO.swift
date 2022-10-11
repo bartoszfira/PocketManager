@@ -20,7 +20,6 @@ struct TransactionDTO: Codable {
     let initial: String?
 }
 
-
 enum TransactionKind: String, Codable {
     case income = "income"
     case expenses = "expenses"

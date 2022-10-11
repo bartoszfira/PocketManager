@@ -9,19 +9,12 @@ import UIKit
 
 class RegisterView: UIView, NibLoadable {
     var contentView: UIView?
-    
-    var completion: (() -> Void)?
 
-    
     @IBOutlet weak var nameView: BlankView!
     @IBOutlet weak var surnameView: BlankView!
     @IBOutlet weak var mailView: BlankView!
     @IBOutlet weak var passwordView: BlankView!
-    
-    @IBAction func ctaTapped(_ sender: Any) {
-        completion?()
-    }
-    
+    @IBOutlet weak var ctaButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
