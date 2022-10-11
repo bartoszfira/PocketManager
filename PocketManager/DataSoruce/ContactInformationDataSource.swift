@@ -6,9 +6,11 @@
 //
 
 import UIKit
+
 protocol ContactInformationDataSourceDelegate: AnyObject {
     func didSelectEdit(with contact: ContactDTO?)
 }
+
 class ContactInformationDataSource: NSObject, UITableViewDataSource {
     weak var delegate: ContactInformationDataSourceDelegate?
     

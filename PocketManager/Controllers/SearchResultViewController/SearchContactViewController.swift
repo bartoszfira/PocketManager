@@ -8,102 +8,51 @@
 import UIKit
 
 class SearchContactViewController: UIViewController {
-
+    var viewModel: SearchContactViewModel?
+    var dataSource = SearchContactDataSource()
+    
     var type: DealType? = .contact
 
     @IBOutlet weak var tableView: UITableView!
-    var contact: [ContactDTO]? = []
-    var filteredContact: [ContactDTO]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SearchContactViewModel(presenter: self)
         setupTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchData()
+        viewModel?.viewWillAppear()
     }
     
-    func filterContentForSearchText (searchText: String) {
-        guard let contact = contact else {
-            return
-        }
-        for index in 0..<contact.count {
-            if contact[index].name!.lowercased().contains(searchText.lowercased()) || contact[index].surname!.lowercased().contains(searchText.lowercased()) {
-                filteredContact?.append(contact[index])
-
-            }
-        }
-    }
-
     func setupTable() {
         tableView.register(ContactTableViewCell.getNib, forCellReuseIdentifier: ContactTableViewCell.identifier)
-        tableView.delegate = self
-        tableView.dataSource = self
-
-        filteredContact = contact
-    }
-    
-    func fetchData() {
-        ContactService.shared.fetchFriends { [weak self] contacts in
-            self?.contact = contacts
-            self?.tableView.reloadData()
-        }
-    }
-    
-    func displayContactInformation(with contact: ContactDTO?) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ContactInformationViewController") as! ContactInformationViewController
-        self.presentingViewController?.navigationController?.pushViewController(vc, animated: true)
-        // setup
-        vc.dataSource.contact = contact
-    }
-
-}
-extension SearchContactViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72
-    }
-    
-}
-extension SearchContactViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredContact?.count ?? 0
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactTableViewCell.identifier, for: indexPath) as? ContactTableViewCell,
-               let filteredContact = filteredContact else {
-                return UITableViewCell()
-            }
-        let personals = filteredContact[indexPath.row].fullName
-        let initial = "\(filteredContact[indexPath.row].initial)"
-        
-        cell.configure(personals: personals,
-                       mail: filteredContact[indexPath.row].mail,
-                       iconInitial: initial )
-        
-        cell.completion = { [weak self] in
-            
-            self?.displayContactInformation(with: filteredContact[indexPath.row])
-        }
-            return cell
-
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
     }
 }
 
 extension SearchContactViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
-            filteredContact = contact
-            
-        } else {
-            filteredContact = []
-            filterContentForSearchText(searchText: searchText)
+      
+            viewModel?.filterContentForSearchText(with: searchText)
             tableView.reloadData()
-        }
     }
+}
+
+extension SearchContactViewController: SearchContactPresenter {
+    func reloadContactData(contacts: [ContactDTO]?) {
+        dataSource.contact = contacts
+        tableView.reloadData()
+    }
+
+    func navigateToContactInformation(with contact: ContactDTO?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ContactInformationViewController") as! ContactInformationViewController
+        self.presentingViewController?.navigationController?.pushViewController(vc, animated: true)
+        vc.dataSource.contact = contact
+    }
+
+    
 }

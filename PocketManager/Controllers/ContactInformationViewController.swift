@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol ContactInformationDelegate: AnyObject {
-    func reloadData()
-}
-
 class ContactInformationViewController: UIViewController {
 
     var viewModel: ContactInformationViewModel?
@@ -57,16 +53,6 @@ class ContactInformationViewController: UIViewController {
     }
 }
 
-// do VM
-extension ContactInformationViewController: ContactInformationDelegate {
-    func reloadData() {
-        guard let contact = dataSource.contact else { return }
-        ContactService.shared.fetchFriend(id: contact.userId) { contact in
-            self.tableView.reloadData()
-        }
-    }
-}
-
 extension ContactInformationViewController: ContactInformationPresenter {
 
     func reloadTransactionsData(with transactions: [TransactionDTO]?) {
@@ -81,8 +67,10 @@ extension ContactInformationViewController: ContactInformationPresenter {
     func navigateToEdit(with contact: ContactDTO?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "EditContactViewController") as! EditContactViewController
-        vc.delegate = self
-        vc.contact = contact
+        let vm = EditContactViewModel(presenter: vc.self)
+        vc.viewModel = vm
+        vc.viewModel?.delegate = viewModel
+        vc.viewModel?.contact = contact
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -96,5 +84,10 @@ extension ContactInformationViewController: ContactInformationPresenter {
         alert.addAction(removeAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: true)
+    }
+    
+    func reloadData(contact: ContactDTO) {
+        dataSource.contact = contact
+        tableView.reloadData()
     }
 }

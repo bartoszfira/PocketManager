@@ -78,6 +78,12 @@
 		40BE39F028EF38FE007405F1 /* ContactInformationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */; };
 		40BE39F228F451BB007405F1 /* EditContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F128F451BB007405F1 /* EditContactPresenter.swift */; };
 		40BE39F428F451F5007405F1 /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F328F451F5007405F1 /* EditContactViewModel.swift */; };
+		40BE39F628F58F4E007405F1 /* SearchTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F528F58F4E007405F1 /* SearchTransactionPresenter.swift */; };
+		40BE39F828F58F7A007405F1 /* SearchTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F728F58F7A007405F1 /* SearchTransactionViewModel.swift */; };
+		40BE39FA28F590AB007405F1 /* SearchTransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39F928F590AB007405F1 /* SearchTransactionDataSource.swift */; };
+		40BE39FC28F5AAC8007405F1 /* SearchContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */; };
+		40BE39FE28F5AADE007405F1 /* SearchContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */; };
+		40BE3A0028F5AB6F007405F1 /* SearchContactDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */; };
 		40BE669E287305F700F76A08 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE669D287305F700F76A08 /* InitialView.swift */; };
 		40BE66A02873060700F76A08 /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BE669F2873060700F76A08 /* InitialView.xib */; };
 		40BE66A328730CF800F76A08 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */; };
@@ -188,6 +194,12 @@
 		40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationDataSource.swift; sourceTree = "<group>"; };
 		40BE39F128F451BB007405F1 /* EditContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactPresenter.swift; sourceTree = "<group>"; };
 		40BE39F328F451F5007405F1 /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
+		40BE39F528F58F4E007405F1 /* SearchTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTransactionPresenter.swift; sourceTree = "<group>"; };
+		40BE39F728F58F7A007405F1 /* SearchTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTransactionViewModel.swift; sourceTree = "<group>"; };
+		40BE39F928F590AB007405F1 /* SearchTransactionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTransactionDataSource.swift; sourceTree = "<group>"; };
+		40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactViewModel.swift; sourceTree = "<group>"; };
+		40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactPresenter.swift; sourceTree = "<group>"; };
+		40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactDataSource.swift; sourceTree = "<group>"; };
 		40BE669D287305F700F76A08 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		40BE669F2873060700F76A08 /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
 		40BE66A128730CF800F76A08 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -293,6 +305,8 @@
 				40BE39E928EEF454007405F1 /* AddNewContactViewModel.swift */,
 				40BE39ED28EF2630007405F1 /* ContactInformationViewModel.swift */,
 				40BE39F328F451F5007405F1 /* EditContactViewModel.swift */,
+				40BE39F728F58F7A007405F1 /* SearchTransactionViewModel.swift */,
+				40BE39FB28F5AAC8007405F1 /* SearchContactViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,6 +325,8 @@
 				40BE39E728EEF41C007405F1 /* AddNewContactPresenter.swift */,
 				40BE39EB28EF24CF007405F1 /* ContactInformationPresenter.swift */,
 				40BE39F128F451BB007405F1 /* EditContactPresenter.swift */,
+				40BE39F528F58F4E007405F1 /* SearchTransactionPresenter.swift */,
+				40BE39FD28F5AADE007405F1 /* SearchContactPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -323,6 +339,8 @@
 				4057D70528EC654A00FE021D /* TransactionsDataSource.swift */,
 				40BE39E528EC847B007405F1 /* ContactsDataSource.swift */,
 				40BE39EF28EF38FE007405F1 /* ContactInformationDataSource.swift */,
+				40BE39F928F590AB007405F1 /* SearchTransactionDataSource.swift */,
+				40BE39FF28F5AB6F007405F1 /* SearchContactDataSource.swift */,
 			);
 			path = DataSoruce;
 			sourceTree = "<group>";
@@ -708,14 +726,17 @@
 				4057D6FA28E5BCAF00FE021D /* AddNewRecordViewModel.swift in Sources */,
 				40817E6B286EEE720058666E /* ContactsViewController.swift in Sources */,
 				407D98D428893A9400E9AF83 /* TitleListViewController.swift in Sources */,
+				40BE39FA28F590AB007405F1 /* SearchTransactionDataSource.swift in Sources */,
 				40BE669E287305F700F76A08 /* InitialView.swift in Sources */,
 				40F139BC2858EC5F00FC4B7D /* UIViewNib+Extension.swift in Sources */,
+				40BE39FC28F5AAC8007405F1 /* SearchContactViewModel.swift in Sources */,
 				40BE66B828735F3200F76A08 /* AddNewContactViewController.swift in Sources */,
 				407D98D12889346600E9AF83 /* SimpleTableViewCell.swift in Sources */,
 				401EE657287DC36400B03B73 /* LoginViewController.swift in Sources */,
 				405848752864C2D800DC76A2 /* ScrapBalanceView.swift in Sources */,
 				4057D6F828E5BA1900FE021D /* AddNewRecordPresenter.swift in Sources */,
 				4058486F285CCF0400DC76A2 /* BalanceView.swift in Sources */,
+				40BE39F828F58F7A007405F1 /* SearchTransactionViewModel.swift in Sources */,
 				401EE659287DC3AA00B03B73 /* RegisterViewController.swift in Sources */,
 				4057D6E628E444DF00FE021D /* RegistrationCredencial.swift in Sources */,
 				401EE65128773D1A00B03B73 /* ContactDTO.swift in Sources */,
@@ -731,6 +752,7 @@
 				4057D6E828E4550100FE021D /* DashboardViewModel.swift in Sources */,
 				40817E672869FFF70058666E /* UIVIewController+Extension.swift in Sources */,
 				407D98DF2889A58400E9AF83 /* DealType.swift in Sources */,
+				40BE39F628F58F4E007405F1 /* SearchTransactionPresenter.swift in Sources */,
 				4057D6DF28E1EC3A00FE021D /* LoginCredentials.swift in Sources */,
 				4058486D285CA84900DC76A2 /* Double+Extension.swift in Sources */,
 				4057D6E328E4427700FE021D /* RegisterPresenter.swift in Sources */,
@@ -740,8 +762,10 @@
 				40C52E9C2888871B0030189E /* TransactionService.swift in Sources */,
 				4057D70628EC654A00FE021D /* TransactionsDataSource.swift in Sources */,
 				40F139BA2858EC4400FC4B7D /* Nib+Extension.swift in Sources */,
+				40BE39FE28F5AADE007405F1 /* SearchContactPresenter.swift in Sources */,
 				401EE65C287DC58800B03B73 /* LoginView.swift in Sources */,
 				4058488D286653AA00DC76A2 /* AddNewRecordView.swift in Sources */,
+				40BE3A0028F5AB6F007405F1 /* SearchContactDataSource.swift in Sources */,
 				40BE39EC28EF24CF007405F1 /* ContactInformationPresenter.swift in Sources */,
 				4057D70228EC569F00FE021D /* TransactionsPresenter.swift in Sources */,
 			);

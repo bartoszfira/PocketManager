@@ -67,12 +67,14 @@ class ContactsViewController: UIViewController {
 
     func setupSearchBar() {
         let resultController = dataSource.listType.searchViewController
-        
+
         searchBar = UISearchController(searchResultsController: resultController)
         navigationItem.searchController = searchBar
         searchBar?.searchBar.delegate = resultController as? UISearchBarDelegate
         searchBar?.searchBar.placeholder = "Search Contact..."
         searchBar?.searchBar.sizeToFit()
+
+        (navigationItem.searchController?.searchResultsController as? SearchContactViewController)?.dataSource.delegate = viewModel
     }
 
     func segmentAction() {
@@ -113,6 +115,5 @@ extension ContactsViewController: ContactsPresenter {
         self.setupHeader()
         setupSearchBar()
         (navigationItem.searchController?.searchResultsController as? SearchContactViewController)?.type = dataSource.listType
-        
     }
 }

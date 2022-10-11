@@ -9,5 +9,6 @@ import Foundation
 
 protocol EditContactPresenter: AnyObject {
     func navigateToContactInformation()
-    func clearFields()
+//    func clearFields()
+    func updateFields(with contact: ContactDTO?)
 }

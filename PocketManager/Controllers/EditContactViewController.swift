@@ -10,35 +10,30 @@ import UIKit
 
 class EditContactViewController: UIViewController {
     
-    weak var delegate: ContactInformationDelegate?
     var viewModel: EditContactViewModel?
     
-    var contact: ContactDTO?
+//    var contact: ContactDTO?
     
     @IBOutlet weak var contactView: AddNewContactView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = EditContactViewModel(presenter: self)
         setupView()
-        setupField()
-        
-        contactView.completion = {
-            guard let contact = self.contact else { return }
-            
-            if  self.getData().name != contact.name ||
-                self.getData().surname != contact.surname ||
-                self.getData().mail != contact.mail {
-               
-                self.createContact()
-                self.delegate?.reloadData()
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                print("Brak danych")
-            }
-        }
+        viewModel?.viewDidLoad()
+        setupActions()
     }
-
+    
+    func setupActions() {
+        let  buttonAction = UIAction{ [weak self] _ in
+            self?.viewModel?.getData(name: self?.contactView.nameView.dataTextField.text,
+                                     surname: self?.contactView.surenameView.dataTextField.text,
+                                     mail: self?.contactView.mailView.dataTextField.text)
+            self?.viewModel?.didSelectConfirm()
+            
+        }
+        contactView.ctaButton.addAction(buttonAction, for: .touchUpInside)
+    }
+    
     func setupView() {
         super.view.backgroundColor = .appPrimary
         self.hideKeyboardWhenTappedAround()
@@ -48,60 +43,17 @@ class EditContactViewController: UIViewController {
         contactView.ctaButton.setTitle("Save", for: .normal)
         contactView.ctaButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
     }
-    
-    func setupField() {
+}
+
+extension EditContactViewController: EditContactPresenter {
+    func updateFields(with contact: ContactDTO?) {
         contactView.nameView.dataTextField.text = contact?.name
         contactView.surenameView.dataTextField.text = contact?.surname
         contactView.mailView.dataTextField.text = contact?.mail
     }
     
-    
-    func getData() -> ContactDTO {
-        var name = contactView.nameView.dataTextField.text
-        var surname = contactView.surenameView.dataTextField.text
-        var mail = contactView.mailView.dataTextField.text
-        let userId = contact?.userId ?? ""
-
-        name = name?.lowercased().firstUppercased
-        surname = surname?.lowercased().firstUppercased
-        mail = mail?.lowercased()
-        
-        return ContactDTO(userId: userId,
-                          name: name,
-                          surname: surname,
-                          mail: mail)
-    }
-    
-
-    func createContact() {
-        let contact = getData()
-        ContactService.shared.addNew(contact) {
-            print(self.getData())
-            self.clearField()
-        }
-    }
-    
-    
-    func clearField() {
-        contactView.nameView.dataTextField.text = ""
-        contactView.surenameView.dataTextField.text = ""
-        contactView.mailView.dataTextField.text = ""
-    }
-    
-
-}
-
-extension EditContactViewController: EditContactPresenter {
     func navigateToContactInformation() {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    func clearFields() {
-        contactView.nameView.dataTextField.text = ""
-        contactView.surenameView.dataTextField.text = ""
-        contactView.mailView.dataTextField.text = ""
-    }
-    
-    
 }
 

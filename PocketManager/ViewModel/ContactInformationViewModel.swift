@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContactInformationDelegate: AnyObject {
+    func reloadData(contact: ContactDTO?)
+}
+
 final class ContactInformationViewModel {
     weak var presenter: ContactInformationPresenter?
     var transactionService: TransactionServiceProtocol
@@ -45,6 +49,15 @@ extension ContactInformationViewModel {
     }
     
    
+}
+
+extension ContactInformationViewModel: ContactInformationDelegate {
+    func reloadData(contact: ContactDTO?) {
+        guard let contact = contact else { return }
+        contactService.fetchFriend(id: contact.userId) { [weak self] _ in
+            self?.presenter?.reloadData(contact: contact)
+        }
+    }
 }
 
 extension ContactInformationViewModel: ContactInformationDataSourceDelegate {

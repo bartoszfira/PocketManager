@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8742A249-BEE0-44BE-B94A-9CC276FC69F3"
+            uuid = "D47D6A65-F792-4706-8CAA-CE7FB6E2DF6B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PocketManager/ViewModel/ContactsViewModel.swift"
+            filePath = "PocketManager/Controllers/EditContactViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "didSelectCellButton(_:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "navigateToContactInformation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1054D655-D3CA-4290-881F-94684E18411E"
-            shouldBeEnabled = "Yes"
+            uuid = "B12D84C3-D921-448F-88F7-E0B3D72BC59B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PocketManager/ViewModel/ContactInformationViewModel.swift"
+            filePath = "PocketManager/Controllers/SearchResultViewController/SearchTransactionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "didSelectEdit(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "10690BF6-57A6-448E-9D12-8C678199E7E2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PocketManager/ViewModel/ContactInformationViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "didSelectRemove(with:)"
+            landmarkName = "reloadTransactionDate(transactions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

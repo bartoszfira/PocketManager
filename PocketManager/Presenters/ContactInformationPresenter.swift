@@ -12,4 +12,5 @@ protocol ContactInformationPresenter: AnyObject {
     func navigateToEdit(with contact: ContactDTO?)
     func reloadTransactionsData(with transactions: [TransactionDTO]?)
     func presentRemoveAlert(with contact: ContactDTO?)
+    func reloadData(contact: ContactDTO)
 }
