@@ -19,10 +19,10 @@ final class LoginViewModel {
 
     func viewDidLoad() {
         // TODO: --
-        authService.logIn(with: .init(username: "barfira321@gmail.com", password: "admin1"), { [weak self] result, error in
-            if error != nil { return }
-            self?.presenter?.navigateToDashboard()
-        })
+//        authService.logIn(with: .init(username: "barfira321@gmail.com", password: "admin1"), { [weak self] result, error in
+//            if error != nil { return }
+//            self?.presenter?.navigateToDashboard()
+//        })
     }
 }
 
