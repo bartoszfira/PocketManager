@@ -20,7 +20,7 @@ View information about your budget, control expenses and incomes. Built with Swi
 **Available for iOS.**
 
 <p align="center">
-  ![Dashboard](./images/Dashboard.png)
+  ![Dashboard](https://github.com/bartoszfira/PocketManager/blob/main/images/Dashboard.png)
 </p>
 
 ## Features
@@ -34,10 +34,10 @@ A few of the things you can do with PocketManager:
 * Easily search for any contact or transactions
 
 <p align="center">
-  ![PocketManager](./images/PocketManager.png)
+  ![PocketManager](https://github.com/bartoszfira/PocketManager/blob/main/images/PocketManager.png)
 </p>
 <p align="center">
-  ![PocketManager2](./images/PocketManager2.png)
+  ![PocketManager2](https://github.com/bartoszfira/PocketManager/blob/main/images/PocketMenager2.png)
 </p>
 
 ## Purpose of the project
