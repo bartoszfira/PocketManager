@@ -35,7 +35,7 @@ extension SearchTransactionViewModel {
     
     func filterContent(with searchText: String? = nil, scope: Int? = nil) {
         self.searchText = searchText?.lowercased() ?? self.searchText
-        self.scope = scope ?? 0
+        self.scope = scope ?? self.scope
 
         if self.searchText.isEmpty {
             return
